@@ -12,7 +12,7 @@ public class MeanVariance {
 		}
 		
 		double mean = 0;
-		double sigma = 0;
+		double var = 0;
 		
 		for (double i : set) {
 			mean += i;
@@ -21,14 +21,14 @@ public class MeanVariance {
 		mean /= n;
 		
 		for (double i : set) {
-			sigma += Math.pow((i-mean), 2);
+			var += Math.pow((i-mean), 2);
 		}
 		
-		sigma = Math.sqrt(sigma/n);
+		var /= n;
 		
 		
 		System.out.println(mean);
-		System.out.println(sigma);
+		System.out.println(var);
 
 	}
 

@@ -1,5 +1,7 @@
 package week3;
 
+import java.util.Arrays;
+
 public class TempMedian {
 
 	public static void main(String[] args) {
@@ -21,10 +23,33 @@ public class TempMedian {
 		}
 		
 		for (int i : set) {
-			System.out.print(i + " ");			
+			System.out.print(i + " ");
+		}		
+		
+		System.out.println();
+		
+		// sort set
+		Arrays.sort(set);
+		
+		for (int i : set) {
+			System.out.print(i + " ");
 		}
 		
 		System.out.println();
+		
+		if (set.length % 2 != 0) {
+			
+			int out = set[set.length/2];
+			System.out.println(out);
+			
+		} else {
+			
+			double out = ((set[set.length/2] + set[(set.length/2) - 1]) / 2.0);
+			System.out.println(out);
+			
+		}
+		
+		;
 	}
 
 }
