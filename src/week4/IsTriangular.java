@@ -3,9 +3,9 @@ package week4;
 public class IsTriangular {
 
 	public static void main(String[] args) {
-		double a = StdIn.readDouble();
-	    double b = StdIn.readDouble();
-	    double c = StdIn.readDouble();
+		double a = stdlib.StdIn.readDouble();
+	    double b = stdlib.StdIn.readDouble();
+	    double c = stdlib.StdIn.readDouble();
 	    
 	    if (isTri(a, b, c)) {
 	        System.out.printf("%s, %s and %s could be the lengths of a triangle\n", a, b, c);
