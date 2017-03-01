@@ -3,9 +3,9 @@ package week4;
 public class NMax {
 
 	public static void main(String[] args) {
-		double a = StdIn.readInt();
-		double b = StdIn.readInt();
-		double c = StdIn.readInt();
+		double a = stdlib.StdIn.readInt();
+		double b = stdlib.StdIn.readInt();
+		double c = stdlib.StdIn.readInt();
 
 	}
 	
