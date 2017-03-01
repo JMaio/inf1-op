@@ -1,3 +1,4 @@
+package stdlib;
 /*************************************************************************
  *  Compilation:  javac In.java
  *  Execution:    java In
@@ -13,7 +14,6 @@
  *      when used with readChar()
  *
  *************************************************************************/
-
 
 import java.io.BufferedInputStream;
 import java.io.File;

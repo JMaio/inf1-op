@@ -1,3 +1,4 @@
+package stdlib;
 /*************************************************************************
  *  Compilation:  javac Picture.java
  *  Execution:    java Picture imagename
