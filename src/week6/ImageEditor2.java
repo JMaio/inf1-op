@@ -19,19 +19,19 @@ public class ImageEditor2 {
 	}
 	
 	public static Picture threshold(Picture p, int thresh) {
-		Picture greyscale = new Picture(p.width(), p.height());
+		Picture threshed = new Picture(p.width(), p.height());
 		for (int i = 0; i < p.width(); i++) {
 			for (int j = 0; j < p.height(); j++) {
 				int l = (int) Math.round(luminance(p.get(i, j)));
 				if (l >= thresh) {
-					greyscale.set(i, j, toGrey(p.get(i, j)));
+					threshed.set(i, j, toGrey(p.get(i, j)));
 				}
 				else {
-					greyscale.set(i, j, new Color(0, 0, 0));
+					threshed.set(i, j, new Color(0, 0, 0));
 				}
 			}
 		}
-		return greyscale;
+		return threshed;
 	}
 	
 	public static void main(String[] args) {
