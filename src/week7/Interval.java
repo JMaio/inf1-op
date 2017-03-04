@@ -12,7 +12,7 @@ public class Interval {
 	
 	public boolean doesContain(double x) {
 		if (!isEmpty()) {
-			if (x >= mLeft || x <= mRight) {
+			if (x >= mLeft && x <= mRight) {
 				return true;
 			}
 		}
@@ -30,11 +30,11 @@ public class Interval {
 	public boolean intersects(Interval b) {
 		if (!isEmpty() && !b.isEmpty()) {
 			if (mLeft <= b.mLeft) {				// this has range further left than b
-				if (mRight > b.mLeft) {			// this has range further right than b
+				if (mRight >= b.mLeft) {			// this has range further right than b
 					return true;
 				}
 			} else if (mRight >= b.mRight) {
-				if (mLeft < b.mRight) {
+				if (mLeft <= b.mRight) {
 					return true;
 				}
 			}
