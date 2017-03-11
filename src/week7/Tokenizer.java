@@ -4,11 +4,9 @@ import stdlib.In;
 
 public class Tokenizer {
 
-	String[] mTokens;
+	private String[] mTokens = {};
 	
-	public Tokenizer() {
-		mTokens = {};
-	}
+	public Tokenizer() {}
 	
 	public Tokenizer(String fname) {
 		tokensFromFile(fname);
@@ -16,12 +14,19 @@ public class Tokenizer {
 
 	public void tokensFromFile(String fname) {
 		In file = new In(fname);
-		mTokens = file.readAll().split(" ");
+		String str = file.readAll();
+		tokenize(str);
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	public void tokenize(String str) {
+		mTokens = str.split("\\W+");
 	}
-
+	
+	public String[] getTokens() {
+		return mTokens;
+	}
+	
+	public int getNumberTokens() {
+		return mTokens.length;
+	}
 }
